@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+// =========================
+// styles/navbar.scss
+// =========================
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #020617;
+
+  .links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #020617;
+      flex-direction: column;
+      display: none;
+    }
+
+    .links.open {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+}
